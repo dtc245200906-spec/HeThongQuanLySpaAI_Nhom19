@@ -1,0 +1,484 @@
+
+/* Trang quản lý khách hàng */
+
+.customers-page {
+  width: 100%;
+  min-width: 0;
+  padding: 4px 0 32px;
+  color: #254236;
+}
+
+.customers-page,
+.customers-page * {
+  box-sizing: border-box;
+}
+
+.customers-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.customers-eyebrow,
+.customers-modal-eyebrow {
+  display: inline-block;
+  color: #7c9986;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  margin-bottom: 8px;
+}
+
+.customers-heading h1 {
+  font-size: 29px;
+  line-height: 1.2;
+  color: #234536;
+  margin: 0 0 9px;
+}
+
+.customers-heading p,
+.customers-toolbar p {
+  margin: 0;
+  color: #87978e;
+  font-size: 14px;
+}
+
+.customers-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: #557e62;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 19px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.customers-add:hover {
+  background: #41694f;
+}
+
+.customers-add:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Thẻ thống kê */
+
+.customers-summary {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid #edf0e9;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(35, 65, 46, 0.04);
+}
+
+.customers-summary-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 17px;
+  background: #e9f2e9;
+  color: #527d5e;
+}
+
+.customers-summary > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.customers-summary span {
+  font-size: 13px;
+  color: #829389;
+}
+
+.customers-summary strong {
+  font-size: 29px;
+  line-height: 1.2;
+  color: #244535;
+}
+
+.customers-summary small {
+  color: #8d9c92;
+  font-size: 12px;
+}
+
+/* Danh sách khách hàng */
+
+.customers-panel {
+  background: #fff;
+  border: 1px solid #edf0e9;
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 10px 30px rgba(35, 65, 46, 0.04);
+}
+
+.customers-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.customers-toolbar h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #244535;
+}
+
+.customers-refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border: none;
+  border-radius: 12px;
+  background: #edf3ed;
+  color: #52775b;
+  cursor: pointer;
+}
+
+.customers-refresh:hover {
+  background: #e0ebe0;
+}
+
+.customers-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8faf7;
+  border: 1px solid #e5ebe4;
+  border-radius: 12px;
+  padding: 0 15px;
+  margin-bottom: 22px;
+  color: #8da397;
+}
+
+.customers-search input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #284437;
+  font-size: 14px;
+}
+
+.customers-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.customers-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.customers-table th {
+  padding: 15px 14px;
+  border-bottom: 1px solid #edf0e9;
+  color: #95a59a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.customers-table td {
+  padding: 18px 14px;
+  border-bottom: 1px solid #f1f3ef;
+  color: #4d6556;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.customers-table tbody tr:hover {
+  background: #fafcf9;
+}
+
+.customers-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 160px;
+}
+
+.customers-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #e6efe6;
+  color: #4c7758;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.customers-person > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.customers-person strong {
+  color: #2b4938;
+  font-size: 13px;
+}
+
+.customers-person small {
+  color: #9aaba0;
+  font-size: 11px;
+}
+
+.customers-cell-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.customers-empty {
+  padding: 35px !important;
+  text-align: center;
+  color: #8b9b90 !important;
+}
+
+/* Thông báo */
+
+.customers-success,
+.customers-error {
+  padding: 14px 17px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.customers-success {
+  background: #e7f3e8;
+  color: #347858;
+}
+
+.customers-error {
+  background: #fff0ee;
+  color: #ad3d35;
+}
+
+/* Cửa sổ thêm khách hàng */
+
+.customers-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: rgba(22, 45, 33, 0.55);
+  backdrop-filter: blur(5px);
+}
+
+.customers-modal {
+  width: 100%;
+  max-width: 680px;
+  max-height: calc(100vh - 44px);
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #edf0e9;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 25px 70px rgba(13, 39, 23, 0.2);
+}
+
+.customers-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.customers-modal-header h2 {
+  margin: 0 0 9px;
+  font-size: 25px;
+  line-height: 1.25;
+  color: #254b36;
+}
+
+.customers-modal-header p {
+  margin: 0;
+  color: #89998e;
+  font-size: 14px;
+}
+
+.customers-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: 1px solid #e6ebe5;
+  border-radius: 11px;
+  background: #f6f8f5;
+  color: #5a7260;
+  cursor: pointer;
+}
+
+.customers-close:hover {
+  background: #e9f0e9;
+}
+
+/* Form 2 cột */
+
+.customers-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.customers-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+  color: #365343;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.customers-field b {
+  color: #d16b60;
+}
+
+.customers-field-full {
+  grid-column: 1 / -1;
+}
+
+.customers-field input,
+.customers-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #dfe8de;
+  border-radius: 11px;
+  padding: 13px 14px;
+  outline: none;
+  background: #fbfcfa;
+  color: #294637;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.customers-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.customers-field input:focus,
+.customers-field textarea:focus {
+  border-color: #70987b;
+  box-shadow: 0 0 0 3px rgba(92, 139, 104, 0.12);
+  background: #fff;
+}
+
+.customers-field input::placeholder,
+.customers-field textarea::placeholder {
+  color: #a5b2a7;
+}
+
+/* Nút dưới form */
+
+.customers-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 27px;
+  padding-top: 22px;
+  border-top: 1px solid #edf0e9;
+}
+
+.customers-cancel {
+  border: 1px solid #e2e8e1;
+  border-radius: 11px;
+  padding: 12px 19px;
+  background: #f3f6f1;
+  color: #56705d;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.customers-cancel:hover {
+  background: #e8eee7;
+}
+
+.customers-form-error {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .customers-heading h1 {
+    font-size: 25px;
+  }
+
+  .customers-panel {
+    padding: 18px;
+  }
+
+  .customers-modal-overlay {
+    padding: 12px;
+  }
+
+  .customers-modal {
+    padding: 22px 18px;
+    border-radius: 18px;
+    max-height: calc(100vh - 24px);
+  }
+
+  .customers-modal-header h2 {
+    font-size: 21px;
+  }
+
+  .customers-form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .customers-field-full {
+    grid-column: auto;
+  }
+
+  .customers-form-actions {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,24 @@
+﻿# Python
+.venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Thong tin bi mat
+.env
+.env.*
+
+# Database va ban sao du lieu
+*.db
+*.sqlite
+*.sqlite3
+
+# Node.js
+node_modules/
+frontend/dist/
+
+# Editor va he dieu hanh
+.vscode/
+.DS_Store
+Thumbs.db
